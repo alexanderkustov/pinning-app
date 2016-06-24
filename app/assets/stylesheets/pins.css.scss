@@ -1,0 +1,38 @@
+body {
+  background: url(asset-path('laptop-background.jpg')) no-repeat;
+}
+a, p {
+  color: #dd5566;
+}
+h1, h3{
+  background-color: #1573ff;
+  font-family: 'Lobster', cursive;
+  font-size: 60px;
+  color: #dd5566;
+}
+h3 {
+  font-size: 28px;
+}
+a {
+  font-weight: bolder;
+}
+p {
+  font-family: 'Lobster', cursive;
+  font-size: 16px;
+}
+.pin-container{
+  padding: 10px;
+}
+.pin {
+  padding: 40px;
+  min-height: 343px;
+  background-color: #1573ff;
+  border: 1px solid #efefef;
+}
+.show-pin{
+  background-color: #fff;
+  padding: 40px;
+}
+hr{
+  clear:both;
+}
