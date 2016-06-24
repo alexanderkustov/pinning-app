@@ -5,8 +5,8 @@ class CreatePinnings < ActiveRecord::Migration
       t.references :pin, index: true
       t.timestamps
     end
-    add_foreign_key :pinnings, :users
-    add_foreign_key :pinnings, :pins
+    add_foreign_key :pinnings, :users, on_delete: :cascade
+    add_foreign_key :pinnings, :pins, on_delete: :cascade
 
     Pin.where("user_id IS NOT NULL").each do |pin|
       puts "got pin #{pin.id}"

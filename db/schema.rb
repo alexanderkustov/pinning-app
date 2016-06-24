@@ -21,8 +21,10 @@ ActiveRecord::Schema.define(version: 20160624173246) do
   end
 
   create_table "pinnings", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "pin_id"
+    t.integer  "user_id"
+    t.integer  "pin_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "pinnings", ["pin_id"], name: "index_pinnings_on_pin_id", using: :btree
@@ -54,7 +56,7 @@ ActiveRecord::Schema.define(version: 20160624173246) do
     t.string   "password_digest"
   end
 
-  add_foreign_key "pinnings", "pins"
-  add_foreign_key "pinnings", "users"
+  add_foreign_key "pinnings", "pins", on_delete: :cascade
+  add_foreign_key "pinnings", "users", on_delete: :cascade
   add_foreign_key "pins", "users"
 end
